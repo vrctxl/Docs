@@ -1,0 +1,32 @@
+.btn {
+  font-size: 12px;
+  padding: 4px 8px;
+  display: inline;
+  cursor: pointer;
+  background: var(--gray-100);
+  // border: 1px solid var(--gray-300);
+  border: none;
+  border-radius: 8px;
+  color: var(--gray-600);
+  // filter: drop-shadow(0 0 1px rgba(40, 41, 61, 0.04))
+  //   drop-shadow(0 2px 4px rgba(96, 97, 112, 0.16));
+  font-weight: 600;
+  margin: 5px;
+
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.return {
+  border: none;
+  background-color: transparent;
+  color: var(--ifm-color-secondary-contrast-foreground);
+  font-weight: normal;
+}
+
+.property {
+  border: none;
+  background-color: transparent;
+  color: var(--ifm-color-primary-contrast-foreground);
+  font-weight: bold;
+}
