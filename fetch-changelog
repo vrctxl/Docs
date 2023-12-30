@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Check if the required tool (curl) is installed
+command -v curl >/dev/null 2>&1 || { echo >&2 "curl is required but not installed. Aborting."; exit 1; }
+
+# Function to fetch the changelog from the GitHub repository
+get_changelog() {
+    local repo=$1
+    local owner=$2
+    local dest=$3
+
+    # Fetch the CHANGELOG.md file from the GitHub repository
+    curl -s "https://raw.githubusercontent.com/$owner/$repo/main/CHANGELOG.md" -o "$dest"
+
+    # Check if the download was successful
+    if [ $? -eq 0 ]; then
+        echo "CHANGELOG.md downloaded successfully for $repo."
+    else
+        echo "Failed to download CHANGELOG.md for $repo."
+    fi
+}
+
+# Check if the script is called with the repository name and owner as arguments
+#if [ $# -ne 2 ]; then
+#    echo "Usage: $0 <repository> <owner>"
+#    exit 1
+#fi
+
+# Fetch the changelog for the specified repository
+# get_changelog "$1" "$2"
+
+get_changelog "CommonTXL" "vrctxl" "docs/common-txl/100-changelog.md"
+get_changelog "AccessTXL" "vrctxl" "docs/access-txl/100-changelog.md"
+get_changelog "PlayerAudioTXL" "vrctxl" "docs/player-audio-txl/100-changelog.md"
+get_changelog "MiscTXL" "vrctxl" "docs/misc-txl/100-changelog.md"
+get_changelog "VideoTXL" "vrctxl" "docs/video-txl/100-changelog.md"
+get_changelog "PortalTXL" "vrctxl" "docs/portal-txl/100-changelog.md"
