@@ -1,0 +1,16 @@
+.gameObject {
+  display: inline;
+  font-weight: 500;
+  color: var(--ifm-color-primary-contrast-foreground);
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 0.2rem;
+  padding-left: 0.2rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.2rem;
+
+  img {
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: text-bottom;
+  }
+}

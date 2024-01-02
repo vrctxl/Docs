@@ -35,7 +35,8 @@ the GameObject menu:
 You can also drag the prefab directly from the Packages folder, although adding objects and components from the GameObject
 menu can have the benefit of ensuring more things are automatically hooked up correctly for you.
 
-Expand the **Sync Video Player** object node, and select the **Screen Manager**.  The default configuration looks like this:
+Expand the <GameObject type="variant" name="Sync Video Player" /> node, and select the <GameObject type="prefab" name="Screen Manager" />.  The 
+default configuration looks like this:
 
 ![Screen Manager](/img/unity/video/third-party-ltcgi-screenman-1.png)
 
@@ -62,7 +63,7 @@ Add the LTCGI controller by dragging its prefab into your scene.  The prefab is 
 
 > `Packages/LTCGI/LTCGI Controller.prefab`
 
-Select the new LTCGI Controller node.
+Select the new <GameObject name="LTCGI Controller" /> node.
 
 ![LTCGI Controller Component](/img/unity/video/third-party-ltcgi-controller.png)
 
@@ -82,8 +83,8 @@ The **LTCGI_Screen** component can only be added to a mesh that's a single quad 
 :::
 
 Since the screen that comes with Sync Video Player prefab is a quad, it's possible to add the screen component to it directly.
-Expand the **Screen Manager** in your hierarchy to find the **Quad** object, which is the default screen.  Click **Add Component**
-and search for the LTCGI Screen component.
+Expand the <GameObject type="prefab" name="Screen Manager" /> in your hierarchy to find the <GameObject name="Quad" /> object, 
+which is the default screen.  Click **Add Component** and search for the LTCGI Screen component.
 
 :::tip
 
@@ -112,7 +113,9 @@ Make sure the surfaces you intend to be reflective have been setup with compatib
 
 This should be everything you need to get a basic LTCGI scene going with the video player.  You can test this with the VRChat
 Client Sim and loading a video with a Unity-based video source.  If the system doesn't appear to be working, but your video is
-showing up on the screen, here's a couple things to check to help you debug.
+showing up on the screen, try the troubleshooting topics below.
+
+### Troubleshooting
 
 #### Check the CRT
 
