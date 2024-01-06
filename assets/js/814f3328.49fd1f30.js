@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvrctxl=self.webpackChunkvrctxl||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"TXL Prefabs Documentation","permalink":"/Docs/blog/welcome","unlisted":false}]}')}}]);
