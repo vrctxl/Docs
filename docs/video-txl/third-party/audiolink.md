@@ -11,7 +11,7 @@ AudioLink is fed by a Unity AudioSource, usually from a video player.  VideoTXL 
 multiple video sources and audio profiles, so the video player needs to be linked to the AudioLink
 controller.  Once linked, it will manage setting and swapping the audio sources for you.
 
-:::info LTCGI Resources
+:::info AudioLink Resources
 
 * [GitHub Repository](https://github.com/llealloo/vrc-udon-audio-link)
 
