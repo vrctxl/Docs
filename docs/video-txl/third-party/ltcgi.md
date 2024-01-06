@@ -115,7 +115,7 @@ This should be everything you need to get a basic LTCGI scene going with the vid
 Client Sim and loading a video with a Unity-based video source.  If the system doesn't appear to be working, but your video is
 showing up on the screen, try the troubleshooting topics below.
 
-### Troubleshooting
+## Troubleshooting
 
 #### Check the CRT
 
