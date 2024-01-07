@@ -9,3 +9,58 @@
   height: 200px;
   width: 200px;
 }
+
+.featureIcon {
+  display: inline-block;
+  width: 100%;
+  font-size: 5em;
+  text-align: center;
+}
+
+[data-theme='light'] .colorYellow {
+  color: #D6C542;
+}
+
+[data-theme='light'] .colorBlue{
+  color: #274C72;
+}
+
+[data-theme='light'] .colorRed {
+  color: #9C0C0C;
+}
+
+[data-theme='light'] .colorGreen {
+  color: #4D8914;
+}
+
+[data-theme='light'] .colorPurple {
+  color: #72496E;
+}
+
+[data-theme='light'] .colorOrange {
+  color: #E08503;
+}
+
+[data-theme='dark'] .colorYellow {
+  color: #FFF5B5;
+}
+
+[data-theme='dark'] .colorBlue {
+  color: #C2EFFF;
+}
+
+[data-theme='dark'] .colorRed {
+  color: #F68B8B;
+}
+
+[data-theme='dark'] .colorGreen {
+  color: #CCF2A6;
+}
+
+[data-theme='dark'] .colorPurple {
+  color: #D9C4D7;
+}
+
+[data-theme='dark'] .colorOrange {
+  color: #FDCE89;
+}

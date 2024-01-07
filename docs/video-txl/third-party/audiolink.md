@@ -31,7 +31,7 @@ Skip this step if you've already setup the AudioLink controller in your world.
 
 Use the top-level menu to add the AudioLink prefabs to your scene:
 
-> `Tools -> AudioLink -> Add AudioLink Prefab to Scene
+> `Tools -> AudioLink -> Add AudioLink Prefab to Scene`
 
 This will create an <GameObject type="prefab" name="AudioLink" /> node, which is the main AudioLink object.
 It will also add an <GameObject type="prefab" name="AudioLinkController" /> node, which is a mobile UI object
