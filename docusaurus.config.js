@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'TXL Prefabs',
-  tagline: 'Packages based around the VideoTXL video player and related ecosystem.',
+  tagline: 'The VideoTXL video player and other complementary packages for VRChat.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

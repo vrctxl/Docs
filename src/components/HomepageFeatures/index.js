@@ -17,7 +17,7 @@ const FeatureList = [
     url: 'docs/common-txl',
     description: (
       <>
-        Common components and base classes for TXL projects.
+        Common components and base classes for TXL projects.  This package is required by all other packages.
       </>
     ),
   },
