@@ -1,0 +1,47 @@
+.mainBox {
+  background-color: var(--ifm-code-background);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.proBox {
+  width: 50%;
+  margin-right: auto;
+  display: inline-block;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  vertical-align: top;
+}
+
+.proConList {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+  vertical-align: top;
+  margin-bottom: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.proIcon {
+  color: var(--ifm-color-success);
+}
+
+.conBox {
+  width: 50%;
+  margin-left: auto;
+  display: inline-block;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0;
+  vertical-align: top;
+}
+
+.conIcon {
+  color: var(--ifm-color-danger);
+}
