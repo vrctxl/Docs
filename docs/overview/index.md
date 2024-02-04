@@ -2,7 +2,7 @@
 
 **TXL Prefabs** are a small ecosystem of packages originally rooted in the **VideoTXL** video player.  VideoTXL was built
 with a focus on supporting events, and several adjacent components were developed along with it to support that purpose.
-These other components have since been broken apart into separate independent or semi-indepdent packages.
+These other components have since been broken apart into separate independent or semi-independent packages.
 
 ## Package Hierarchy
 
