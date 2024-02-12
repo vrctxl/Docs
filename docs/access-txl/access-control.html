@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Access Control | TXL Prefabs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://vrctxl.github.io/Docs/docs/access-txl/access-control"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Access Control | TXL Prefabs"><meta data-rh="true" name="description" content="The main AccessControl prefab is actually distributed through the CommonTXL package, allowing the"><meta data-rh="true" property="og:description" content="The main AccessControl prefab is actually distributed through the CommonTXL package, allowing the"><link data-rh="true" rel="icon" href="/Docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://vrctxl.github.io/Docs/docs/access-txl/access-control"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/access-txl/access-control" hreflang="en"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/access-txl/access-control" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Docs/blog/rss.xml" title="TXL Prefabs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/Docs/blog/atom.xml" title="TXL Prefabs Atom Feed"><link rel="stylesheet" href="/Docs/assets/css/styles.f530d7c6.css">
-<script src="/Docs/assets/js/runtime~main.839a1dbd.js" defer="defer"></script>
+<script src="/Docs/assets/js/runtime~main.36e6ca3b.js" defer="defer"></script>
 <script src="/Docs/assets/js/main.2acffdc1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -34,6 +34,14 @@ scripts and assets included in the AccessTXL package.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="restrict-master-if-owner-present">Restrict Master if Owner Present<a href="#restrict-master-if-owner-present" class="hash-link" aria-label="Direct link to Restrict Master if Owner Present" title="Direct link to Restrict Master if Owner Present">​</a></h4>
 <blockquote>
 <p>Only allows master to have access if the instance owner is not present in the world.</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="allow-first-join">Allow First Join<a href="#allow-first-join" class="hash-link" aria-label="Direct link to Allow First Join" title="Direct link to Allow First Join">​</a></h4>
+<blockquote>
+<p>Grants access to the player who joined the world first.  Can be used as a substitute for instance owner in group or public instances.</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="restrict-first-join-if-owner-present">Restrict First Join if Owner Present<a href="#restrict-first-join-if-owner-present" class="hash-link" aria-label="Direct link to Restrict First Join if Owner Present" title="Direct link to Restrict First Join if Owner Present">​</a></h4>
+<blockquote>
+<p>Only allows the first joined played to have access if the instance owner is not present in the world.</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="allow-whitelist">Allow Whitelist<a href="#allow-whitelist" class="hash-link" aria-label="Direct link to Allow Whitelist" title="Direct link to Allow Whitelist">​</a></h4>
 <blockquote>
@@ -81,8 +89,8 @@ order presented in this list, and other handlers can be added later via an API m
 </blockquote>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-api">Public API<a href="#public-api" class="hash-link" aria-label="Direct link to Public API" title="Direct link to Public API">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="network-sync">Network Sync<a href="#network-sync" class="hash-link" aria-label="Direct link to Network Sync" title="Direct link to Network Sync">​</a></h3>
-<p>This object is <strong>not</strong> network synced.  Each client maintains its own view of the world.  Some of the optional components that can be used
-are synced separately.</p>
+<p>This object is network synced.  Each client maintains its own view of the world, with the exception of identifying which player
+joined the world first.  Some of the optional components that can be used are synced separately.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="inherited-api">Inherited API<a href="#inherited-api" class="hash-link" aria-label="Direct link to Inherited API" title="Direct link to Inherited API">​</a></h3>
 <ul>
 <li>EventBase Public API</li>
