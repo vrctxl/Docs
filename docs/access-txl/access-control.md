@@ -41,6 +41,14 @@ Draging this prefab into your scene will create a default AccessControl setup th
 
 > Only allows master to have access if the instance owner is not present in the world.
 
+#### Allow First Join
+
+> Grants access to the player who joined the world first.  Can be used as a substitute for instance owner in group or public instances.
+
+#### Restrict First Join if Owner Present
+
+> Only allows the first joined played to have access if the instance owner is not present in the world.
+
 #### Allow Whitelist
 
 > Enables checking the built-in whitelist or any added whitelist sources.
@@ -102,8 +110,8 @@ a group of users and assigning it to multiple Access Control objects that repres
 
 ### Network Sync
 
-This object is **not** network synced.  Each client maintains its own view of the world.  Some of the optional components that can be used
-are synced separately.
+This object is network synced.  Each client maintains its own view of the world, with the exception of identifying which player
+joined the world first.  Some of the optional components that can be used are synced separately.
 
 ### Inherited API
 
