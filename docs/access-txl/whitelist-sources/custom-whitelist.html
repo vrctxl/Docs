@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Custom Whitelist | TXL Prefabs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/custom-whitelist"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Custom Whitelist | TXL Prefabs"><meta data-rh="true" name="description" content="You can create your own whitelist logic by writing a new U# script that extends either the AccessControlUserSource base class, or"><meta data-rh="true" property="og:description" content="You can create your own whitelist logic by writing a new U# script that extends either the AccessControlUserSource base class, or"><link data-rh="true" rel="icon" href="/Docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/custom-whitelist"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/custom-whitelist" hreflang="en"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/custom-whitelist" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Docs/blog/rss.xml" title="TXL Prefabs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/Docs/blog/atom.xml" title="TXL Prefabs Atom Feed"><link rel="stylesheet" href="/Docs/assets/css/styles.f530d7c6.css">
-<script src="/Docs/assets/js/runtime~main.36e6ca3b.js" defer="defer"></script>
+<script src="/Docs/assets/js/runtime~main.15f9e64e.js" defer="defer"></script>
 <script src="/Docs/assets/js/main.2acffdc1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -22,7 +22,22 @@ one of the other whitelist source classes.</p>
 <p>AccessControl extends the CommonTXL EventBase class, so other scripts can register interest in the following events:</p>
 <table><thead><tr><th>Event</th><th>Description</th></tr></thead><tbody><tr><td><strong>EVENT_REVALIDATE</strong></td><td>Emitted by a whitelist implementation when access for any player has potentially changed.</td></tr></tbody></table>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="methods">Methods<a href="#methods" class="hash-link" aria-label="Direct link to Methods" title="Direct link to Methods">​</a></h3>
-<h4><code class="return_Suvr">bool</code> <code class="method_ZRZh">_ContainsName<!-- -->(</code><code class="paramType_qGRr"> <!-- -->string</code> <code class="paramName_CHXx">name</code> <code class="method_ZRZh">)</code></h4>
+<h4><code class="return_Suvr">bool</code> <code class="method_ZRZh">_ContainsAnyPlayerInWorld<!-- -->(</code><code class="method_ZRZh">)</code></h4>
+<blockquote>
+<p>Returns true if the whitelist contains the display name of any player currently present in the world.  If anything has
+happened that could change the result of this call for any name, the whitelist should emit an <code>EVENT_REVALIDATE</code> event
+so that any listening scripts can re-check a name if necessary.</p>
+<p>The result of this method should be cacheable.  If anything has happened that could change the result of this call for any name,
+the whitelist should emit an <code>EVENT_REVALIDATE</code> event so that any listening scripts can re-check a name if necessary.</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-1"><code class="return_Suvr">bool</code> <code class="method_ZRZh">_ContainsName<!-- -->(</code><code class="paramType_qGRr"> <!-- -->string</code> <code class="paramName_CHXx">name</code> <code class="method_ZRZh">)</code><a href="#-1" class="hash-link" aria-label="Direct link to -1" title="Direct link to -1">​</a></h4>
+<blockquote>
+<p>Returns true if the whitelist contains the given player&#x27;s display name.  It is up to the whitelist implementation as to what
+qualifies as a contained name, and does not need to be limited to an explicit list.</p>
+<p>The result of this method should be cacheable.  If anything has happened that could change the result of this call for any name,
+the whitelist should emit an <code>EVENT_REVALIDATE</code> event so that any listening scripts can re-check a name if necessary.</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2"><code class="return_Suvr">bool</code> <code class="method_ZRZh">_ContainsPlayer<!-- -->(</code><code class="paramType_qGRr"> <!-- -->VRCPlayerAPI</code> <code class="paramName_CHXx">player</code> <code class="method_ZRZh">)</code><a href="#-2" class="hash-link" aria-label="Direct link to -2" title="Direct link to -2">​</a></h4>
 <blockquote>
 <p>Returns true if the whitelist contains the given player&#x27;s display name.  It is up to the whitelist implementation as to what
 qualifies as a contained name, and does not need to be limited to an explicit list.</p>

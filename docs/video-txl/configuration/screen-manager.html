@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Screen Manager | TXL Prefabs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://vrctxl.github.io/Docs/docs/video-txl/configuration/screen-manager"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Screen Manager | TXL Prefabs"><meta data-rh="true" name="description" content="The Screen Manager is a component included on every TXL video player prefab by default.  It is responsible for"><meta data-rh="true" property="og:description" content="The Screen Manager is a component included on every TXL video player prefab by default.  It is responsible for"><link data-rh="true" rel="icon" href="/Docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://vrctxl.github.io/Docs/docs/video-txl/configuration/screen-manager"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/video-txl/configuration/screen-manager" hreflang="en"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/video-txl/configuration/screen-manager" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Docs/blog/rss.xml" title="TXL Prefabs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/Docs/blog/atom.xml" title="TXL Prefabs Atom Feed"><link rel="stylesheet" href="/Docs/assets/css/styles.f530d7c6.css">
-<script src="/Docs/assets/js/runtime~main.36e6ca3b.js" defer="defer"></script>
+<script src="/Docs/assets/js/runtime~main.15f9e64e.js" defer="defer"></script>
 <script src="/Docs/assets/js/main.2acffdc1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -271,6 +271,10 @@ changes instead.</p>
 <blockquote>
 <p>The debug log object that any logging should be directed to.</p>
 </blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="debug-state">Debug State<a href="#debug-state" class="hash-link" aria-label="Direct link to Debug State" title="Direct link to Debug State">​</a></h4>
+<blockquote>
+<p>A debug state object that will peridocally capture a snapshot of internal state of the object.</p>
+</blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="include-events">Include Events<a href="#include-events" class="hash-link" aria-label="Direct link to Include Events" title="Direct link to Include Events">​</a></h4>
 <blockquote>
 <p>A more verbose logging option that writes entries related to event handling.</p>
@@ -338,7 +342,12 @@ bound video player.</p>
 <blockquote>
 <p>Refreshes displays.</p>
 </blockquote>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-10"><code class="return_Suvr">void</code> <code class="method_ZRZh">_SetTextureOverride<!-- -->(</code><code class="paramType_qGRr"> <!-- -->ScreenOverrideType</code> <code class="paramName_CHXx">overrideType</code><code class="method_ZRZh">,</code><code class="paramType_qGRr"> <!-- -->Texture</code> <code class="paramName_CHXx">texture</code> <code class="method_ZRZh">)</code><a href="#-10" class="hash-link" aria-label="Direct link to -10" title="Direct link to -10">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-10"><code class="return_Suvr">void</code> <code class="method_ZRZh">_SetDebugState<!-- -->(</code><code class="paramType_qGRr"> <!-- -->DebugState</code> <code class="paramName_CHXx">debugState</code> <code class="method_ZRZh">)</code><a href="#-10" class="hash-link" aria-label="Direct link to -10" title="Direct link to -10">​</a></h4>
+<blockquote>
+<p>Sets the debug state object at runtime, replacing the previous debug state if it exists.  Passing <code>null</code> will unasign
+any current debug state.</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-11"><code class="return_Suvr">void</code> <code class="method_ZRZh">_SetTextureOverride<!-- -->(</code><code class="paramType_qGRr"> <!-- -->ScreenOverrideType</code> <code class="paramName_CHXx">overrideType</code><code class="method_ZRZh">,</code><code class="paramType_qGRr"> <!-- -->Texture</code> <code class="paramName_CHXx">texture</code> <code class="method_ZRZh">)</code><a href="#-11" class="hash-link" aria-label="Direct link to -11" title="Direct link to -11">​</a></h4>
 <blockquote>
 <p>Sets the current override texture for the given override type.  If the texture is different than what was
 already set, causes displays to refresh.</p>
