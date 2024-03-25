@@ -110,8 +110,12 @@ a group of users and assigning it to multiple Access Control objects that repres
 
 ### Network Sync
 
-This object is network synced.  Each client maintains its own view of the world, with the exception of identifying which player
-joined the world first.  Some of the optional components that can be used are synced separately.
+This object is network synced.  The following data is synced:
+
+* First joined player
+
+Generally, each client maintains its own view of the world, and any changes on the AccessControl object will only affect the local
+client.  Some of the optional components that can be used are synced separately.
 
 ### Inherited API
 

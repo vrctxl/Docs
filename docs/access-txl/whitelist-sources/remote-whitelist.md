@@ -52,6 +52,11 @@ The object is setup to be able to parse multiple formats of display names.
 > When enabled, the remote URL will be loaded and parsed for the local player when they join the instance.  Leave disabled to control
 > when or if the remote URL is loaded.
 
+#### Start Delay
+
+> When Refresh on Start is enabled, the start delay is the number of seconds to wait before making the remote load call.  You can use
+> this as a crude way to change loading priority when multiple string loaders are present.
+
 #### Enable Sync Refresh
 
 > When enabled, a method on the whitelist can be invoked to reload the URL, and simultaneously trigger all players in the world to also

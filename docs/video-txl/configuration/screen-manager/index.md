@@ -344,6 +344,10 @@ interesting alternative to just doing texture swaps for some states.  Some possi
 
 > The debug log object that any logging should be directed to.
 
+#### Debug State
+
+> A debug state object that will peridocally capture a snapshot of internal state of the object.
+
 #### Include Events
 
 > A more verbose logging option that writes entries related to event handling.
@@ -422,6 +426,11 @@ ScreenManager extends the CommonTXL EventBase class, so other scripts can regist
 #### <ApiMethod return="void" method="_Refresh" />
 
 > Refreshes displays.
+
+#### <ApiMethod return="void" method="_SetDebugState" params={["DebugState", "debugState"]} />
+
+> Sets the debug state object at runtime, replacing the previous debug state if it exists.  Passing `null` will unasign
+> any current debug state.
 
 #### <ApiMethod return="void" method="_SetTextureOverride" params={["ScreenOverrideType", "overrideType", "Texture", "texture"]} />
 
