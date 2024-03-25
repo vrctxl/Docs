@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Installation
 
 These instructions will walk you through making the TXL Prefabs packages available in your world project.
