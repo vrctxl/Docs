@@ -93,6 +93,105 @@ The object is setup to be able to parse multiple formats of display names.
 
 > When enabled, some diagnostic info will be written to the VRChat log.
 
+## Document Examples
+
+Here are a few different examples of valid whitelist documents and their corresponding settings (mainly related to JSON)
+
+<details>
+  <summary>Newline Example</summary>
+  * **Remote String Format**: `Newline`
+
+  ```
+  DisplayName1
+  DisplayName2
+  DisplayName3
+  ```
+</details>
+
+<details>
+  <summary>JSON Array Example 1</summary>
+  * **Remote String Format**: `JSON Array`
+  * **JSON Object Path**:
+  * **JSON Entry Path**:
+  
+  ```
+  [
+    "DisplayName1",
+    "DisplayName2",
+    "DisplayName3"
+  ]
+  ```
+</details>
+
+<details>
+  <summary>JSON Array Example 2</summary>
+  * **Remote String Format**: `JSON Array`
+  * **JSON Object Path**: `names`
+  * **JSON Entry Path**:
+  
+  ```
+  {
+    "names": [
+      "DisplayName1",
+      "DisplayName2",
+      "DisplayName3"
+    ]
+  }
+  ```
+</details>
+
+<details>
+  <summary>JSON Array Example 3</summary>
+  * **Remote String Format**: `JSON Array`
+  * **JSON Object Path**: `embedded/names`
+  * **JSON Entry Path**:
+  
+  ```
+  {
+    "embedded": {
+      "names": [
+        "DisplayName1",
+        "DisplayName2",
+        "DisplayName3"
+      ]
+    },
+    "other": {
+      "foo": 1,
+      "bar": 2
+    }
+  }
+  ```
+</details>
+
+<details>
+  <summary>JSON Array Example 4</summary>
+  * **Remote String Format**: `JSON Array`
+  * **JSON Object Path**: `users`
+  * **JSON Entry Path**: `display`
+  
+  ```
+  {
+    "users": [
+      {
+        "display": "DisplayName1",
+        "color": "green",
+        "index": 1
+      },
+      {
+        "display": "DisplayName2",
+        "color": "blue",
+        "index": 2
+      },
+      {
+        "display": "DisplayName3",
+        "color": "red",
+        "index": 3
+      }
+    ]
+  }
+  ```
+</details>
+
 ## Public API
 
 ### Network Sync
