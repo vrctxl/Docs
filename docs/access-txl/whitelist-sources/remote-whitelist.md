@@ -45,6 +45,15 @@ The object is setup to be able to parse multiple formats of display names.
 >
 > Leave this field blank if the target array is an array of strings containing display names.
 
+### Validation
+
+#### Data Validator
+
+> An optional [Data Validator](../validation/data-validator.md) that can be used to modify the downloaded string data or validate
+> that it hasn't been tampered with.
+> 
+> See specifically the [Digest Data Validator](../validation/digest-data-validator.md) for an out of the box validation solution.
+
 ### Refresh Options
 
 #### Refresh on Start
