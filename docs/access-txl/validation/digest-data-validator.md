@@ -22,7 +22,6 @@ The digest should be **prepended** to the data, as the very first part of th str
 optionally following it.
 
 <details>
-  <summary>Data Example</summary>
   Example of `Newline` data for a **Remote Whitelist** including a SHA1 digest
 
   ```
@@ -65,7 +64,6 @@ is performed on the full data length.
 The **Prefix Postfix** stategy is better than prefix or postfix alone.
 
 <details>
-  <summary>Prefix Postfix Example</summary>
   Example of `Newline` data combined with the secret key `txl123` using the **Prefix Postfix Key** strategy.
   Note that there is no additional whitespace between key and data.
 
