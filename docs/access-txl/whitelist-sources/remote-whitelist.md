@@ -21,9 +21,21 @@ The object is setup to be able to parse multiple formats of display names.
 
 ### Remote Loading
 
+#### Remote Source
+
+> The remote data source for this whitelist.  Supported sources are:
+> * **URL**: The remote whitelist downloads its data directly from a URL.
+> * **Remote List**: The remote whitelist receives its data from another remote whitelist.
+
 #### Remote String URL
 
 > A URL to the remote endpoint that will provide the expected text data.
+> Only applicable if `Remote Source` is set to `URL`.
+
+#### Remote User List
+
+> Another remote user list object.  This remote list will subscribe to any data downloads received by the referenced list.
+> Only applicable if `Remote Source` is set to `Remote List`.
 
 #### Remote String Format
 
@@ -55,6 +67,12 @@ The object is setup to be able to parse multiple formats of display names.
 > See specifically the [Digest Data Validator](../validation/digest-data-validator.md) for an out of the box validation solution.
 
 ### Refresh Options
+
+:::info
+
+Refresh options are only available of the `Remote Source` is set to `URL`.
+
+:::
 
 #### Refresh on Start
 
@@ -218,6 +236,12 @@ are kept locally.
 #### <ApiProperty return="string[]" property="UserList" get={true} set={true} />
 
 > Gets or sets the current array of display names associated with this static whitelist. The static whitelist will grant access to any name contained in this list.
+
+:::warning
+
+The contents of the returned array should not be modified.
+
+:::
 
 ### Methods
 
