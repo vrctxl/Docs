@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">Remote Whitelist | TXL Prefabs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://vrctxl.github.io/Docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/remote-whitelist"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Remote Whitelist | TXL Prefabs"><meta data-rh="true" name="description" content="Remote whitelists use VRChat&#x27;s string downloading API to download and parse a text file containing display names."><meta data-rh="true" property="og:description" content="Remote whitelists use VRChat&#x27;s string downloading API to download and parse a text file containing display names."><link data-rh="true" rel="icon" href="/Docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/remote-whitelist"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/remote-whitelist" hreflang="en"><link data-rh="true" rel="alternate" href="https://vrctxl.github.io/Docs/docs/access-txl/whitelist-sources/remote-whitelist" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Docs/blog/rss.xml" title="TXL Prefabs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/Docs/blog/atom.xml" title="TXL Prefabs Atom Feed"><link rel="stylesheet" href="/Docs/assets/css/styles.f530d7c6.css">
-<script src="/Docs/assets/js/runtime~main.3d4dac60.js" defer="defer"></script>
+<script src="/Docs/assets/js/runtime~main.94101cc1.js" defer="defer"></script>
 <script src="/Docs/assets/js/main.bd74fb73.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -20,9 +20,23 @@ control this access.  It does not indicate which access control object is using 
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="configuration">Configuration<a href="#configuration" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration">​</a></h2>
 <p><img loading="lazy" alt="Static whitelist inspector window" src="/Docs/assets/images/access-remote-whitelist-prefab-ad716b0107b5548ad6e23697ccb83ad6.png" width="516" height="587" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="remote-loading">Remote Loading<a href="#remote-loading" class="hash-link" aria-label="Direct link to Remote Loading" title="Direct link to Remote Loading">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="remote-source">Remote Source<a href="#remote-source" class="hash-link" aria-label="Direct link to Remote Source" title="Direct link to Remote Source">​</a></h4>
+<blockquote>
+<p>The remote data source for this whitelist.  Supported sources are:</p>
+<ul>
+<li><strong>URL</strong>: The remote whitelist downloads its data directly from a URL.</li>
+<li><strong>Remote List</strong>: The remote whitelist receives its data from another remote whitelist.</li>
+</ul>
+</blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="remote-string-url">Remote String URL<a href="#remote-string-url" class="hash-link" aria-label="Direct link to Remote String URL" title="Direct link to Remote String URL">​</a></h4>
 <blockquote>
-<p>A URL to the remote endpoint that will provide the expected text data.</p>
+<p>A URL to the remote endpoint that will provide the expected text data.
+Only applicable if <code>Remote Source</code> is set to <code>URL</code>.</p>
+</blockquote>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="remote-user-list">Remote User List<a href="#remote-user-list" class="hash-link" aria-label="Direct link to Remote User List" title="Direct link to Remote User List">​</a></h4>
+<blockquote>
+<p>Another remote user list object.  This remote list will subscribe to any data downloads received by the referenced list.
+Only applicable if <code>Remote Source</code> is set to <code>Remote List</code>.</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="remote-string-format">Remote String Format<a href="#remote-string-format" class="hash-link" aria-label="Direct link to Remote String Format" title="Direct link to Remote String Format">​</a></h4>
 <blockquote>
@@ -52,6 +66,7 @@ that it hasn&#x27;t been tampered with.</p>
 <p>See specifically the <a href="/Docs/docs/access-txl/validation/digest-data-validator">Digest Data Validator</a> for an out of the box validation solution.</p>
 </blockquote>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="refresh-options">Refresh Options<a href="#refresh-options" class="hash-link" aria-label="Direct link to Refresh Options" title="Direct link to Refresh Options">​</a></h3>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Refresh options are only available of the <code>Remote Source</code> is set to <code>URL</code>.</p></div></div>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="refresh-on-start">Refresh on Start<a href="#refresh-on-start" class="hash-link" aria-label="Direct link to Refresh on Start" title="Direct link to Refresh on Start">​</a></h4>
 <blockquote>
 <p>When enabled, the remote URL will be loaded and parsed for the local player when they join the instance.  Leave disabled to control
@@ -134,6 +149,7 @@ are kept locally.</p>
 <blockquote>
 <p>Gets or sets the current array of display names associated with this static whitelist. The static whitelist will grant access to any name contained in this list.</p>
 </blockquote>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>The contents of the returned array should not be modified.</p></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="methods">Methods<a href="#methods" class="hash-link" aria-label="Direct link to Methods" title="Direct link to Methods">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="-1"><code class="return_Suvr">void</code> <code class="method_ZRZh">_LoadJsonArrayData<!-- -->(</code><code class="paramType_qGRr"> <!-- -->string</code> <code class="paramName_CHXx">data</code> <code class="method_ZRZh">)</code><a href="#-1" class="hash-link" aria-label="Direct link to -1" title="Direct link to -1">​</a></h4>
 <blockquote>
